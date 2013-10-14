@@ -46,7 +46,7 @@ class DiagramsController < ApplicationController
     @diagram.project_id = @project_id
 
     if @diagram.save
-      redirect_to sprint_path(@diagram.user_story.sprint, @project.id)
+      redirect_to :back
     else
       render :action => :new
     end
